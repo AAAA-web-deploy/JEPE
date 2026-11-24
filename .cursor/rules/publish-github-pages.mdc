@@ -7,9 +7,11 @@ alwaysApply: true
 
 This website is a static site. GitHub Pages serves the `main` branch root of https://github.com/AAAA-web-deploy/JEPE.git
 
-Live site: https://aaaa-web-deploy.github.io/JEPE/
+Live site: https://jensenpepe.xyz/
 
-When a requested change to this website is finished, commit it and push to `origin` `main`. Pages rebuilds from that branch on every push, so a successful push is the republish step. Then confirm the push succeeded and give the live URL.
+The custom domain is set by the `CNAME` file. Keep that file as `jensenpepe.xyz`. Public URLs in `index.html` (canonical, `og:url`, `og:image`, `twitter:image`) must use `https://jensenpepe.xyz/`.
+
+When a requested change to this website is finished, commit it and push to `origin` `main`. GitHub Pages publishes the `main` branch root to https://jensenpepe.xyz/ on every push. After the push, confirm the new commit is the latest Pages build and that https://jensenpepe.xyz/ serves the update, then give that URL. A rebuild usually finishes within a couple of minutes.
 
 - Do not force-push.
 - Do not change git config.
