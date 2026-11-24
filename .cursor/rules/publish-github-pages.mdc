@@ -1,0 +1,17 @@
+---
+description: After website updates, commit and push so GitHub Pages republishes the live site
+alwaysApply: true
+---
+
+# Publish site updates to GitHub Pages
+
+This website is a static site. GitHub Pages serves the `main` branch root of https://github.com/AAAA-web-deploy/JEPE.git
+
+Live site: https://aaaa-web-deploy.github.io/JEPE/
+
+When a requested change to this website is finished, commit it and push to `origin` `main`. Pages rebuilds from that branch on every push, so a successful push is the republish step. Then confirm the push succeeded and give the live URL.
+
+- Do not force-push.
+- Do not change git config.
+- Do not commit secrets, tokens, or credential files.
+- If the user is only asking a question, or explicitly says not to publish, do not commit or push.

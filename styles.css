@@ -1,0 +1,134 @@
+@font-face{font-family:Display;src:url('assets/fonts/NotoSerifDisplay-Regular.ttf');font-display:swap}@font-face{font-family:Display;src:url('assets/fonts/NotoSerifDisplay-Bold.ttf');font-weight:700;font-display:swap}@font-face{font-family:BodySerif;src:url('assets/fonts/DejaVuSerif.ttf');font-display:swap}
+:root{--navy:#080f2b;--ivory:#f7e3b8;--gold:#e2bd7d;--ink:#2f2015;--header:68px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--ivory);font:17px/1.65 BodySerif,Georgia,serif}img{display:block;max-width:100%}button,a{font:inherit}a{color:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.6}a:focus-visible,button:focus-visible{outline:3px solid #ffdd91;outline-offset:4px}.skip-link{position:fixed;z-index:300;top:-100px;left:12px;background:var(--ivory);color:#1d1720;padding:10px}.skip-link:focus{top:10px}.site-header{height:var(--header);position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:clamp(12px,2vw,34px);padding:0 clamp(18px,3vw,54px);background:#070e29ed;border-bottom:1px solid #c6a36b76;box-shadow:0 6px 25px #03081c88}.brand{display:flex;gap:10px;align-items:center;text-decoration:none;font:700 clamp(17px,1.5vw,25px) Display,serif;white-space:nowrap}.brand img{width:45px;height:45px;border-radius:50%;border:1px solid #e0c48f}.site-header nav{display:flex;align-items:center;justify-content:center;gap:clamp(13px,2vw,36px);flex:1}.site-header nav a{font:700 12px Display,serif;letter-spacing:.13em;text-decoration:none;white-space:nowrap}.site-header nav a:hover{color:#e2b871}.head-right{display:flex;align-items:center;gap:12px}.socials{display:flex;justify-content:center;gap:8px}.social,.social--pending{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid #d3b478;background:#101734d9;color:var(--ivory);padding:7px 9px;font:700 11px Display,serif;letter-spacing:.08em;text-decoration:none}.social img,.social--pending img{width:13px;height:13px;filter:invert(89%) sepia(24%) saturate(384%) hue-rotate(329deg) brightness(105%)}.social--pending{opacity:.55}.header-copy{display:flex;gap:8px;align-items:center;padding:7px 9px;background:#e7cf9e;color:#2e211b;border:1px solid #e6c48c;font:700 10px Display,serif;letter-spacing:.08em;white-space:nowrap}.copy-label{border-left:1px solid #7a5d3c;padding-left:7px}.header-copy:disabled{opacity:1;color:#735c42}.hero{position:relative;min-height:calc(100svh - var(--header));overflow:hidden}.hero__sky{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,11,37,.92) 3%,rgba(5,11,37,.57) 50%,rgba(5,11,37,.1)),linear-gradient(0deg,var(--navy),transparent 28%),url('assets/art/stage-beginning.webp') center/cover}.hero__inner{position:relative;display:flex;align-items:center;min-height:calc(100svh - var(--header));padding:clamp(35px,5vw,82px) 7vw;overflow:hidden}.hero__copy{position:relative;z-index:4;max-width:58rem}.eyebrow{color:#f2d398;font:700 clamp(11px,.92vw,14px)/1.3 Display,serif;letter-spacing:.19em}.hero h1{font:700 clamp(49px,7.6vw,118px)/.97 Display,Georgia,serif;letter-spacing:-.065em;margin:.2em 0 .24em;text-shadow:0 3px 14px #06091c}.ticker{display:flex;align-items:center;gap:12px;color:#e8c58a;letter-spacing:.13em;font:700 15px Display,serif}.ticker span:first-child{border:1px solid #d7b777;padding:2px 14px;font-size:19px;letter-spacing:.03em}.ticker .diamond{font-size:20px;color:#f7d898}.hero h2{font:700 clamp(31px,3.8vw,60px)/1.08 Display,serif;letter-spacing:.035em;margin:.35em 0 .45em}.button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:10px 25px;text-decoration:none;border:2px solid #46301c;background:linear-gradient(#f8dda2,#ca984f);box-shadow:inset 0 0 0 2px #f9e8b9,0 4px 14px #0006;color:#26190e;font:700 14px Display,serif;letter-spacing:.08em;transition:filter .2s,transform .2s}.button:hover{filter:brightness(1.1);transform:translateY(-2px)}.hero__hint{color:#e2c28b;font:italic 15px BodySerif,serif;margin-top:18px}.hero__character{position:absolute;z-index:2;right:1%;bottom:0;width:min(51vw,740px);max-height:95%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 12px 18px #0007)}
+.journey{position:relative;isolation:isolate}.stage{position:relative;min-height:70svh;overflow:hidden;isolation:isolate;scroll-margin-top:var(--header)}.stage__back{position:absolute;inset:0;z-index:-2;background-position:center;background-size:cover}.stage__back::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#080f2be0 0%,transparent 17%,transparent 77%,#080f2be8 100%)}.stage--beginning .stage__back{background-image:linear-gradient(90deg,#070c27dd,transparent 67%),url('assets/art/stage-beginning.webp')}.stage--ascent .stage__back{background-image:linear-gradient(270deg,#070c27e8,transparent 70%),url('assets/art/stage-ascent.webp')}.stage--night .stage__back{background-image:linear-gradient(90deg,#070c27c9,transparent 70%),url('assets/art/stage-night.webp')}.stage__inner{position:relative;width:100%;min-height:70svh;display:flex;align-items:center;gap:4vw;padding:clamp(52px,5vw,90px) 6vw clamp(52px,5vw,90px) max(13vw,110px)}.stage__copy{position:relative;z-index:4;max-width:610px;text-shadow:0 3px 8px #030719}.stage__copy h2{font:700 clamp(26px,3vw,48px)/1.15 Display,serif;letter-spacing:.025em;margin:.42em 0 .6em}.stage__copy p:not(.eyebrow):not(.small-note){max-width:38em;font-size:clamp(16px,1.22vw,19px);line-height:1.6}.stage__figure{object-fit:contain;filter:drop-shadow(0 15px 16px #0007)}.figure--beginning{width:min(45vw,640px);max-height:60svh;margin-left:auto}.stage__inner--right{justify-content:space-between;padding-right:9vw}.figure--ascent{width:min(42vw,580px);max-height:54svh}.stage--ascent .stage__copy{margin-left:auto}.night-figure{position:relative;width:min(47vw,650px);margin-left:auto}.figure--night{width:100%;max-height:60svh}.campfire{position:absolute;left:-6%;bottom:-1%;width:43%;filter:drop-shadow(0 0 18px #e9833477);animation:fire 2.7s ease-in-out infinite alternate;pointer-events:none}@keyframes fire{to{filter:brightness(1.2) drop-shadow(0 0 28px #fca34caa);transform:scale(1.025)}}.hold-button{touch-action:none;user-select:none}.meter{height:10px;max-width:340px;border:1px solid #e9ca92;border-radius:20px;overflow:hidden;margin-top:15px;background:#08112fd9}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#cf9d58,#ffebbd);border-radius:20px}.small-note{font-size:13px;color:#e2c797}.trail{position:absolute;inset:0;z-index:6;width:100%;height:100%;overflow:visible;pointer-events:none}.trail path{fill:none;stroke-linecap:round;stroke-linejoin:round}.trail__bed{stroke:#1b162dbb;stroke-width:20}.trail__guide{stroke:#d4ac6b88;stroke-width:2;stroke-dasharray:3 12}.trail__drawn{stroke:#f8d48c;stroke-width:3;opacity:.75}.rolling-stone{position:absolute;top:0;left:0;z-index:8;width:clamp(45px,5.7vw,88px);height:auto;will-change:transform;pointer-events:none;filter:drop-shadow(0 5px 5px #000b)}.dust{position:absolute;inset:0;width:100%;height:100%;z-index:7;pointer-events:none}
+.token{position:relative;isolation:isolate;min-height:75svh;display:grid;place-items:center;padding:70px 4vw 55px;background:linear-gradient(#080f2b 0%,#111a43cc 35%,#080f2b 100%),url('assets/art/stage-night.webp') center/cover;scroll-margin-top:var(--header)}.token__inner{width:min(1300px,100%);text-align:center}.token__heading{font:700 clamp(34px,3.7vw,58px)/1 Display,serif;margin:.3em 0}.token__intro{color:#eed0a1;font-size:16px;margin-bottom:20px}.scroll-frame{position:relative;width:100%;min-height:clamp(260px,25vw,370px);--clip:0%;--edge:50%}.scroll-reveal{position:absolute;inset:0;clip-path:inset(0 var(--clip) 0 var(--clip));will-change:clip-path}.scroll-paper{position:absolute;inset:0;background:url('assets/art/blank_token_letter.webp') center/100% 100% no-repeat;filter:drop-shadow(0 14px 14px #0007)}.scroll-content{position:absolute;left:32%;right:27%;top:14%;bottom:12%;display:grid;place-content:center;color:var(--ink)}.scroll-content dl{display:grid;grid-template-columns:max-content 1fr;gap:.5rem 1.5rem;text-align:left;margin:0;font:clamp(14px,1.12vw,17px)/1.35 Display,serif}.scroll-content dt{font-weight:700;letter-spacing:.1em}.scroll-content dd{margin:0;overflow-wrap:anywhere}.inline-copy{font:700 11px Display,serif;color:#6c241c;background:transparent;border:1px solid #8c4932;padding:3px 6px}.scroll-rod{position:absolute;z-index:2;top:4%;bottom:4%;width:clamp(11px,1.3vw,19px);border:1px solid #8b663c;border-radius:10px;background:linear-gradient(90deg,#4b2b18,#bd8f52 24%,#eed6a2 43%,#a5743b 72%,#3a2619);box-shadow:0 5px 9px #0008;transform:translateX(-50%);pointer-events:none}.scroll-rod::before,.scroll-rod::after{content:"";position:absolute;left:-3px;right:-3px;height:7px;background:#d6b273;border:1px solid #6d4825;border-radius:4px}.scroll-rod::before{top:-4px}.scroll-rod::after{bottom:-4px}.scroll-rod--left{left:calc(50% - var(--edge))}.scroll-rod--right{left:calc(50% + var(--edge))}.open-scroll{background:transparent;color:#f4daab;border:1px solid #b69a6c;padding:9px 18px;margin-top:8px;font:700 12px Display,serif;letter-spacing:.12em}.copy-message{display:block;min-height:1.5em;color:#f3d092;font-size:13px}.site-footer{text-align:center;padding:0 20px 50px;background:#080f2b}.site-footer h2{font:700 clamp(30px,4vw,60px)/1.1 Display,serif;margin:0 0 20px}.site-footer p{font:700 12px Display,serif;letter-spacing:.1em;color:#d9bb87;margin-top:25px}.site-footer p span{padding:0 8px}
+@media(max-width:900px){:root{--header:64px}.site-header{padding:0 14px;gap:10px}.site-header nav{gap:14px}.head-right .socials{display:none}.header-copy{font-size:9px}.stage__inner{padding-left:88px}.hero__character{width:54vw}.scroll-content{left:30%;right:24%}}
+@media(max-width:620px){:root{--header:61px}body{font-size:16px}.site-header{gap:7px}.brand{font-size:15px}.brand img{width:38px;height:38px}.site-header nav{gap:9px;margin-left:auto;flex:0}.site-header nav a{font-size:10px;letter-spacing:.03em}.head-right{display:none}.hero,.hero__inner{min-height:calc(100svh - var(--header))}.hero__inner{padding:48px 6vw 15px;align-items:flex-start}.hero h1{font-size:clamp(43px,11vw,68px);letter-spacing:-.065em}.hero h2{font-size:clamp(29px,8vw,43px)}.hero__copy{z-index:4}.hero__character{width:min(87vw,430px);right:-3%;bottom:0;opacity:.96;max-height:55%}.hero__hint{font-size:13px}.stage{min-height:70svh}.stage__inner{min-height:70svh;padding:54px 6vw 230px 70px;align-items:flex-start}.stage__copy{z-index:4}.stage__copy h2{font-size:clamp(24px,6vw,36px)}.stage__copy p:not(.eyebrow):not(.small-note){font-size:15px;line-height:1.5}.stage__figure,.night-figure{position:absolute;bottom:10px;right:-3vw;width:min(62vw,330px);max-height:235px}.figure--ascent{left:auto;right:2%;bottom:3px;width:min(54vw,300px)}.night-figure{position:absolute}.figure--night{position:static;width:100%;max-height:235px}.campfire{bottom:-2%;left:-8%;width:45%}.stage__inner--right .stage__copy{margin:0}.stage--ascent .stage__back{background-position:35% center}.meter{max-width:230px}.trail__bed{stroke-width:12}.trail__guide{stroke-width:1.4}.trail__drawn{stroke-width:2}.rolling-stone{width:45px}.token{min-height:70svh;padding:50px 2vw}.token__heading{font-size:34px}.scroll-frame{min-height:260px}.scroll-content{left:20%;right:17%;top:12%;bottom:10%}.scroll-content dl{font-size:12px;gap:.35rem .6rem}.inline-copy{font-size:10px}.scroll-paper{background-size:100% 100%}.token__intro{font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.campfire{animation:none}.rolling-stone{transition:none}.scroll-reveal{clip-path:none!important}.scroll-rod--left{left:0!important}.scroll-rod--right{left:100%!important}}
+@media(max-width:360px){.brand{font-size:13px;gap:5px}.brand img{width:33px;height:33px}.site-header nav{gap:6px}.site-header nav a{font-size:9px}.site-header{padding:0 9px}.stage__inner{padding-left:62px}}
+
+/* The figures and slope are one integrated scene: Pepe and the stone stay grounded. */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.hero__sky{background-image:linear-gradient(90deg,rgba(5,11,37,.94) 3%,rgba(5,11,37,.50) 48%,rgba(5,11,37,.04)),linear-gradient(0deg,var(--navy),transparent 24%),url('assets/art/hero-uphill-scene.webp');background-position:center;background-size:cover}
+.stage--beginning .stage__back{background-image:linear-gradient(90deg,#070c27e8,transparent 68%),url('assets/art/hero-uphill-scene.webp');background-position:center;background-size:cover}
+.stage--ascent .stage__back{background-image:linear-gradient(270deg,#070c27ed,transparent 70%),url('assets/art/ascent-kneeling-push.webp');background-position:center;background-size:cover;transform-origin:center;will-change:transform}
+/* The complete fire asset sits outside the figure's bounding box, not over the feet. */
+.campfire{left:-32%;bottom:0;width:26%}
+/* Give token facts the central space of the parchment and make them comfortably readable. */
+.scroll-content{left:25%;right:22%;top:12%;bottom:10%}
+.scroll-content dl{width:100%;grid-template-columns:max-content minmax(0,1fr);gap:clamp(.45rem,1vw,.9rem) clamp(1rem,2vw,2.4rem);font-size:clamp(19px,1.65vw,27px);line-height:1.35}
+.scroll-content dd{min-width:0;overflow-wrap:anywhere}
+.inline-copy{font-size:clamp(12px,.9vw,15px);padding:5px 9px}
+@media(max-width:900px){.scroll-content{left:22%;right:18%}.scroll-content dl{font-size:clamp(18px,2.35vw,23px)}}
+@media(max-width:620px){
+ .hero__sky{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2be8 0%,#080f2b82 35%,#080f2b15 70%,#080f2b 100%),url('assets/art/hero-uphill-scene.webp'),url('assets/art/stage-beginning.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .stage--beginning .stage__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2be8 0%,#080f2b80 43%,#080f2b20 75%,#080f2b 100%),url('assets/art/hero-uphill-scene.webp'),url('assets/art/stage-beginning.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .stage--ascent .stage__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bea 0%,#080f2b82 42%,#080f2b12 70%,#080f2b 100%),url('assets/art/ascent-kneeling-push.webp'),url('assets/art/stage-ascent.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .campfire{left:-32%;bottom:0;width:26%}
+ .scroll-frame{min-height:clamp(300px,75vw,380px)}
+ .scroll-content{left:15%;right:13%;top:11%;bottom:9%}
+ .scroll-content dl{grid-template-columns:max-content minmax(0,1fr);gap:.5rem .65rem;font-size:clamp(16px,4.2vw,19px);line-height:1.3}
+ .inline-copy{font-size:12px;padding:4px 6px}
+}
+@media(max-width:620px){
+ .hero__sky{background-image:linear-gradient(180deg,#080f2bf5 0%,#080f2bcf 35%,#080f2b40 65%,#080f2b10 85%,#080f2b5c 100%),url('assets/art/hero-uphill-scene.webp'),url('assets/art/stage-beginning.webp')}
+ .stage--beginning .stage__back{background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/hero-uphill-scene.webp'),url('assets/art/stage-beginning.webp')}
+ .stage--ascent .stage__back{background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/ascent-kneeling-push.webp'),url('assets/art/stage-ascent.webp')}
+ .stage__back::after{background:linear-gradient(180deg,#080f2b90 0%,transparent 20%,transparent 92%,#080f2b55 100%)}
+}
+/* Keep the wider, readable facts grid within the center of the parchment. */
+.scroll-content{display:flex;flex-direction:column;justify-content:center;align-items:stretch}
+
+/* Distinct story scenes; the campsite fire and Pepe share the same ground plane. */
+.stage--beginning .stage__back{background-image:linear-gradient(90deg,#070c27e8,transparent 68%),url('assets/art/beginning-back-push.webp');background-position:center;background-size:cover}
+.stage--ascent .stage__back{background-image:linear-gradient(270deg,#070c27ed,transparent 70%),url('assets/art/ascent-kneeling-push.webp');background-position:center;background-size:cover}
+.stage--night .stage__back{background-image:linear-gradient(90deg,#070c27d9,transparent 55%),url('assets/art/night-builders-vision.webp');background-position:center;background-size:cover}
+.stage--night .stage__inner{align-items:flex-start}
+.night-glow{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.52;animation:camp-glow 3s ease-in-out infinite alternate}
+.night-glow--mobile{display:none}
+@keyframes camp-glow{0%{opacity:.32}55%{opacity:.58}100%{opacity:.42}}
+@media(max-width:620px){
+ .stage--beginning .stage__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/beginning-back-push.webp'),url('assets/art/stage-beginning.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .stage--ascent .stage__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/ascent-kneeling-push.webp'),url('assets/art/stage-ascent.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .stage--night .stage__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/night-builders-vision.webp'),url('assets/art/stage-night.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .night-glow--desktop{display:none}.night-glow--mobile{display:block}
+}
+@media(prefers-reduced-motion:reduce){.night-glow{animation:none}}
+
+/* Expanded trader's journey: one larger stage per market chapter. */
+.stage:not(.stage--night),.stage:not(.stage--night)>.stage__inner{min-height:95svh}
+.hero__sub{max-width:38rem;color:#f7e3b8;font-size:clamp(16px,1.3vw,20px);line-height:1.5;margin:0 0 1.2rem;text-shadow:0 2px 8px #040817}
+.bear-overlay{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background-image:linear-gradient(270deg,#070c27ed,transparent 70%),linear-gradient(135deg,#bc192c70 0%,#dc392a38 45%,#30102644 100%),url('assets/art/ascent-kneeling-push.webp');background-size:cover;background-position:center;transition:opacity .8s ease}
+.stage--ascent.bear-active .bear-overlay{opacity:1}
+.bear-button[aria-pressed="true"]{background:linear-gradient(#e6b985,#b04b38);box-shadow:inset 0 0 0 2px #f4d6aa,0 4px 14px #0006}
+.bear-status{min-height:3em;color:#f3d49e;font:italic 15px/1.45 BodySerif,serif;margin:.8rem 0}
+.night-chapter,.summit-chapter{position:relative;min-height:95svh;isolation:isolate;overflow:hidden}
+.night-chapter>.stage__inner,.summit-chapter>.stage__inner{min-height:95svh}
+.stage--night .night-chapter>.stage__back{background-image:linear-gradient(90deg,#070c27d9,transparent 55%),url('assets/art/night-builders-vision.webp');background-position:center;background-size:cover}
+.night-copy{max-width:clamp(320px,27vw,490px)}
+.scene-note{font-size:12px!important;color:#e0c28f;font-style:italic}
+.summit__back{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,#080f2be0,transparent 17%,transparent 77%,#080f2be8),linear-gradient(90deg,#070c27e8,transparent 65%),url('assets/art/summit-sunrise.webp') center/cover}
+.summit-copy{max-width:clamp(320px,34vw,570px)}
+@media(max-width:620px){
+ .stage:not(.stage--night),.stage:not(.stage--night)>.stage__inner,.night-chapter,.summit-chapter,.night-chapter>.stage__inner,.summit-chapter>.stage__inner{min-height:95svh}
+ .bear-overlay{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),linear-gradient(135deg,#bc192c70 0%,#dc392a38 45%,#30102644 100%),url('assets/art/ascent-kneeling-push.webp'),url('assets/art/stage-ascent.webp');background-size:cover,cover,100% auto,cover;background-position:center,center,center bottom,center;background-repeat:no-repeat}
+ .stage--night .night-chapter>.stage__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/night-builders-vision.webp'),url('assets/art/stage-night.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .summit__back{background-color:#080f2b;background-image:linear-gradient(180deg,#080f2bed 0%,#080f2baf 42%,#080f2b28 68%,#080f2b12 88%,#080f2b5c 100%),url('assets/art/summit-sunrise.webp'),url('assets/art/stage-night.webp');background-size:cover,100% auto,cover;background-position:center,center bottom,center;background-repeat:no-repeat}
+ .night-copy,.summit-copy{max-width:none}
+}
+@media(prefers-reduced-motion:reduce){.bear-overlay{transition:none}}
+@media(min-width:621px){.bear-overlay{background-image:linear-gradient(180deg,#080f2be0 0%,transparent 17%,transparent 77%,#080f2be8 100%),linear-gradient(270deg,#070c27ed,transparent 70%),linear-gradient(135deg,#bc192c70 0%,#dc392a38 45%,#30102644 100%),url('assets/art/ascent-kneeling-push.webp')}}
+
+/* Keep the bear and Pepe visible while leaving a readable text area at the right. */
+@media(min-width:1000px){
+ .stage--ascent .stage__back{background-image:linear-gradient(270deg,#070c27f5 0%,#070c27b8 16%,transparent 48%),url('assets/art/ascent-kneeling-push.webp')}
+ .stage--ascent .stage__inner--right{padding-right:4vw}
+ .stage--ascent .stage__copy{max-width:26vw}
+ .bear-overlay{background-image:linear-gradient(180deg,#080f2be0 0%,transparent 17%,transparent 77%,#080f2be8 100%),linear-gradient(270deg,#070c27f5 0%,#070c27b8 16%,transparent 48%),linear-gradient(135deg,#bc192c70 0%,#dc392a38 45%,#30102644 100%),url('assets/art/ascent-kneeling-push.webp')}
+}
+
+/* Anchor the illustrated struggle to the left so Pepe stays in frame on tall desktop screens. */
+@media(min-width:1000px){.stage--ascent .stage__back,.bear-overlay{background-position:left center}}
+
+/* JEPE art direction: retain the original chapter layout and motion, with artwork
+   kept separate from the text on wide screens and fully visible on phones. */
+.hero__copy{max-width:min(48vw,690px)}
+.hero h1{font-size:clamp(49px,6.9vw,108px);line-height:1.02}
+.ticker span:first-child{color:#b4ef5c;border-color:#9bcc45;background:#102114b8}
+.copy-toast{position:fixed;z-index:150;top:calc(var(--header) + 10px);right:15px;max-width:calc(100vw - 30px);padding:10px 16px;background:#101a34;color:var(--ivory);border:1px solid #c5a56a;box-shadow:0 8px 20px #0007;font-size:13px;pointer-events:none}
+.copy-toast:empty{display:none}
+.site-footer .footer-disclaimer{font:12px/1.6 BodySerif,Georgia,serif;letter-spacing:0;max-width:700px;margin:24px auto 0;color:#b8b9ce}
+@media(min-width:621px){
+ .stage--beginning .stage__back,.stage--ascent .stage__back,.stage--night .night-chapter>.stage__back,.summit__back{background-size:cover;background-position:center}
+ .stage--beginning .stage__back{background-image:linear-gradient(90deg,#080f2beb 0%,#080f2b55 60%,#080f2b00),url('assets/art/stage-beginning.webp')}
+ .stage--ascent .stage__back{background-image:linear-gradient(270deg,#080f2beb 0%,#080f2b55 60%,#080f2b00),url('assets/art/stage-ascent.webp')}
+ .stage--night .night-chapter>.stage__back,.summit__back{background-image:linear-gradient(90deg,#080f2beb 0%,#080f2b55 60%,#080f2b00),url('assets/art/stage-night.webp')}
+ .stage--beginning .stage__back::before,.stage--ascent .stage__back::before,.stage--night .night-chapter>.stage__back::before,.summit__back::before{content:"";position:absolute;inset:0 0 0 29%;background-position:center;background-repeat:no-repeat;background-size:cover;mask-image:linear-gradient(90deg,transparent 0%,#000 19%,#000 100%)}
+ .stage--beginning .stage__back::before{background-image:url('assets/art/beginning-back-push.webp')}
+ .stage--ascent .stage__back::before{inset:0 29% 0 0;background-image:url('assets/art/ascent-kneeling-push.webp');mask-image:linear-gradient(270deg,transparent 0%,#000 19%,#000 100%)}
+ .stage--night .night-chapter>.stage__back::before{background-image:url('assets/art/night-builders-vision.webp')}
+ .summit__back::before{background-image:url('assets/art/summit-sunrise.webp')}
+ .summit__back::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#080f2be0 0%,transparent 17%,transparent 77%,#080f2be8 100%)}
+ .stage__copy{max-width:min(34vw,490px);background:linear-gradient(90deg,#080f2bf0,#080f2bd9 70%,#080f2b88);padding:24px;border-left:1px solid #c6a36b77;border-radius:0 5px 5px 0}
+ .stage--ascent .stage__copy{max-width:min(31vw,465px);background:linear-gradient(270deg,#080f2bf0,#080f2bd9 70%,#080f2b88);border-left:0;border-right:1px solid #c6a36b77}
+ .stage--night .stage__inner{align-items:center}
+ .bear-overlay{background:linear-gradient(135deg,#b5143922,#d8293e55 60%,#2e123c22);mix-blend-mode:screen}
+ .stage--ascent.bear-active .stage__back::before{filter:saturate(1.3) contrast(1.12)}
+ .stage--ascent .stage__back::before{transition:filter .8s ease}
+}
+@media(min-width:621px) and (max-width:1000px){
+ .stage__copy,.stage--ascent .stage__copy{max-width:42vw;padding:18px}.stage__inner{padding-left:78px}.stage__inner--right{padding-right:5vw}
+}
+@media(max-width:620px){
+ .hero__copy{max-width:100%}.hero h1{font-size:clamp(43px,11vw,68px)}
+ .hero__inner{padding-bottom:max(190px,50vw)}
+ .hero__sky{background-image:linear-gradient(180deg,#080f2bf5 0%,#080f2bdc 43%,#080f2b25 75%,#080f2b05 91%,#080f2b70 100%),url('assets/art/hero-uphill-scene.webp'),url('assets/art/stage-beginning.webp')}
+ .stage__inner{padding-bottom:max(230px,52vw)}
+ .stage--ascent .stage__back{background-position:center,center bottom,center}
+ .scroll-frame{min-height:clamp(320px,82vw,420px)}
+ .scroll-content{left:13%;right:11%}
+ .scroll-content dl{font-size:clamp(15px,4.1vw,19px)}
+}
+@media(prefers-reduced-motion:reduce){.stage--ascent .stage__back::before,.button{transition:none}}
+/* Keep the summit chapter below the sticky header when opened by its anchor. */
+.summit-chapter{scroll-margin-top:var(--header)}
